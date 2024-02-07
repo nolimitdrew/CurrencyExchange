@@ -31,13 +31,13 @@ int main()
 
     // Input the amount in dollars
     std::cout << "*Welcome*" << std::endl;
-    std::cout << "Enter the amount in dollars\n> ";
+    std::cout << "Enter the amount in US dollars\n> ";
 
     // Validate and read the input dollar amount
     while (!(std::cin >> dollar)) {
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        std::cout << "Invalid input. Please enter a valid amount in dollars\n> ";
+        std::cout << "Invalid input. Please enter a valid amount in US dollars\n> ";
     }
 
     MainMenu();
@@ -57,25 +57,25 @@ int main()
                 // Conversion logic for USD to EUR
                 std::cout << "Selected: USD to EUR conversion" << std::endl;
                 euro = dollar * dollarsToEuros;
-                std::cout << "Equivalent amount in Euro: " << std::fixed << std::setprecision(2) << euro << std::endl;
+                std::cout << "Equivalent amount in Euro: €" << std::fixed << std::setprecision(2) << euro << std::endl;
                 break;
             case 2:
                 // Conversion logic for USD to JPY
                 std::cout << "Selected: USD to JPY conversion" << std::endl;
                 yen = dollar * dollarsToYen;
-                std::cout << "Equivalent amount in Yen: " << std::fixed << std::setprecision(2) << yen << std::endl;
+                std::cout << "Equivalent amount in Yen: ¥" << std::fixed << std::setprecision(2) << yen << std::endl;
                 break;
             case 3:
                 // Conversion logic for USD to GBP
                 std::cout << "Selected: USD to GBP conversion" << std::endl;
                 pound = dollar * dollarsToPound;
-                std::cout << "Equivalent amount in Pound: " << std::fixed << std::setprecision(2) << pound << std::endl;
+                std::cout << "Equivalent amount in Pound: £" << std::fixed << std::setprecision(2) << pound << std::endl;
                 break;
             case 4:
                 // Conversion logic for USD to CAD
                 std::cout << "Selected: USD to CAD conversion" << std::endl;
                 cad = dollar * dollarsToCAD;
-                std::cout << "Equivalent amount in CAD: " << std::fixed << std::setprecision(2) << cad << std::endl;
+                std::cout << "Equivalent amount in CAD: CAD " << std::fixed << std::setprecision(2) << cad << std::endl;
                 break;
             case 5:
                 MainMenu();
